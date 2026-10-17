@@ -515,3 +515,92 @@ tbody tr:last-child td { border-bottom: 0; }
   .panel, .metric { break-inside: avoid; border: 1px solid #ccc; background: #fff !important; box-shadow: none; color: #111 !important; }
   th, td, .page-head h1, .panel-head h3, .metric-value, .summary-line strong { color: #111 !important; }
 }
+
+/* PHOTO BACKGROUNDS — visual correction to match the approved login mockup */
+.login-wrap {
+  background: linear-gradient(180deg, rgba(4, 12, 22, .04), rgba(4, 12, 22, .18));
+}
+.store-scene {
+  z-index: -2;
+  height: clamp(340px, 50vh, 510px);
+  opacity: 1;
+  background-image:
+    linear-gradient(180deg, rgba(2, 9, 17, .10) 0%, rgba(3, 11, 20, .20) 42%, rgba(4, 13, 23, .92) 100%),
+    url("./assets/storefront-night.webp");
+  background-size: cover;
+  background-position: center 47%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.90) 54%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.90) 54%, transparent 100%);
+}
+.store-scene::before { display: none !important; content: none !important; }
+.store-scene::after {
+  content: "МОЙ МАРКЕТ";
+  position: absolute;
+  top: clamp(34px, 7vh, 72px);
+  left: 50%;
+  width: max-content;
+  max-width: 90%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 205, 106, .28);
+  border-radius: 9px;
+  padding: 7px 22px 9px;
+  background: linear-gradient(135deg, rgba(4, 15, 26, .72), rgba(5, 18, 31, .42));
+  color: #fff3d5;
+  font-size: clamp(22px, 3.5vw, 42px);
+  font-weight: 950;
+  letter-spacing: -.045em;
+  white-space: nowrap;
+  text-shadow: 0 4px 20px rgba(0,0,0,.85), 0 0 22px rgba(255, 178, 59, .28);
+  box-shadow: 0 8px 30px rgba(0,0,0,.22), 0 0 30px rgba(255,178,59,.08);
+  backdrop-filter: blur(3px);
+}
+.store-scene .light { display: none; }
+.role-card {
+  border-color: color-mix(in srgb, var(--accent), transparent 38%);
+  box-shadow: 0 18px 44px rgba(0,0,0,.29), 0 0 0 1px color-mix(in srgb, var(--accent), transparent 89%);
+}
+.role-card:hover { box-shadow: 0 24px 52px rgba(0,0,0,.36), 0 0 0 1px color-mix(in srgb, var(--accent), transparent 73%); }
+.role-art {
+  min-height: clamp(190px, 24vh, 265px);
+  background-size: cover;
+  background-position: center;
+  border-bottom-color: color-mix(in srgb, var(--accent), transparent 55%);
+}
+.role-card:nth-child(1) .role-art { background-image: url("./assets/role-director.webp"); background-position: center 47%; }
+.role-card:nth-child(2) .role-art { background-image: url("./assets/role-admin.webp"); background-position: center 53%; }
+.role-card:nth-child(3) .role-art { background-image: url("./assets/role-cashier.webp"); background-position: center 52%; }
+.role-card:nth-child(4) .role-art { background-image: url("./assets/role-seller.webp"); background-position: center 42%; }
+.role-card:nth-child(5) .role-art { background-image: url("./assets/role-branch.webp"); background-position: center 48%; }
+.role-art::before {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  transform: none;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(4, 12, 20, .16) 0%, rgba(4, 12, 20, .34) 35%, rgba(4, 12, 20, .84) 100%);
+  content: "";
+  pointer-events: none;
+}
+.role-art::after { display: none; content: none; }
+.role-icon { position: relative; z-index: 1; font-size: 40px; text-shadow: 0 3px 18px rgba(0,0,0,.9); }
+.role-name { position: relative; z-index: 1; font-size: clamp(12px, 1vw, 15px); text-shadow: 0 3px 15px rgba(0,0,0,.95); }
+.role-desc { position: relative; z-index: 1; color: #f0f5fb; text-shadow: 0 2px 10px rgba(0,0,0,.96); }
+.role-body { background: linear-gradient(180deg, rgba(4, 13, 22, .93), rgba(4, 14, 24, .98)); }
+@media (max-width: 1450px) {
+  .role-art { min-height: 210px; }
+}
+@media (max-width: 1000px) {
+  .store-scene { height: 390px; }
+  .role-card:nth-child(1) .role-art { background-position: center 48%; }
+  .role-art { min-height: 175px; }
+}
+@media (max-width: 620px) {
+  .store-scene { height: 310px; background-position: center 37%; }
+  .store-scene::after { top: 42px; padding: 7px 15px; font-size: 22px; }
+  .role-art { min-height: 100%; background-size: cover; }
+  .role-icon { font-size: 28px; }
+  .role-name { font-size: 10px; }
+  .role-desc { font-size: 9px; }
+}
