@@ -1,148 +1,120 @@
-/* МОЙ МАРКЕТ PRO — readability upgrade v1
-   Append this file's rules to the END of the existing styles.css.
-   It only improves typography and touch targets; it keeps the current theme and layout. */
+/* МОЙ МАРКЕТ PRO — readable mobile typography v2
+   Replace the repository's readability.css with this file.
+   Keeps the premium navy/gold theme and improves legibility on phones. */
 :root {
-  --readable-text: 15px;
-  --readable-muted: 13px;
+  --readable-text: 16px;
+  --readable-muted: 14px;
 }
-
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-body { font-size: var(--readable-text); line-height: 1.5; }
-.small { font-size: 13px; }
-.eyebrow { font-size: 12px; letter-spacing: .12em; }
-.muted { line-height: 1.5; }
-
-/* Login / role cards */
-.branch-glance strong { font-size: 15px; }
-.branch-list { font-size: 13px; line-height: 1.55; }
-.welcome h1 { font-size: clamp(25px, 2.5vw, 34px); line-height: 1.2; }
-.welcome > .muted { font-size: 14px; }
-.role-name { font-size: 15px; line-height: 1.25; }
-.role-desc { font-size: 13px; line-height: 1.45; }
-.role-icon { font-size: 42px; }
-.role-body { gap: 11px; }
-.field, .branch-select, .select, .search,
-.form-row input, .form-row select, .lang-select {
-  font-size: 15px;
-  line-height: 1.35;
+body { font-size: 16px; line-height: 1.55; }
+.small, .muted.small { font-size: 14px; line-height: 1.5; }
+.eyebrow { font-size: 13px; letter-spacing: .1em; }
+.welcome h1 { font-size: clamp(28px, 3vw, 38px); line-height: 1.2; }
+.welcome > .muted { font-size: 16px; }
+.role-name { font-size: 16px; line-height: 1.3; }
+.role-desc { font-size: 14px; line-height: 1.5; }
+.role-icon { font-size: 44px; }
+.role-body { gap: 13px; }
+.field, .branch-select, .select, .search, .form-row input, .form-row select, .lang-select {
+  font-size: 16px; line-height: 1.4; min-height: 48px;
 }
-.field, .branch-select, .select, .search,
-.form-row input, .form-row select, .lang-select {
-  min-height: 44px;
-}
-.remember { font-size: 13px; line-height: 1.4; gap: 9px; }
-.remember input { width: 17px; height: 17px; flex: 0 0 auto; }
-.btn { font-size: 14px; line-height: 1.35; min-height: 43px; padding: 11px 15px; }
-.feature-title { font-size: 13px; letter-spacing: .09em; }
-.features { font-size: 13px; line-height: 1.5; gap: 7px; }
-.features div { gap: 8px; align-items: flex-start; font-size: 13px; line-height: 1.5; }
-.features b { font-size: 13px; line-height: 1.5; }
-.login-footer { row-gap: 14px; }
-.footer-stat strong { font-size: 19px; line-height: 1.25; }
-.footer-stat span { font-size: 12px; line-height: 1.4; }
+.remember { font-size: 15px; line-height: 1.45; gap: 10px; }
+.remember input { width: 19px; height: 19px; flex: 0 0 auto; }
+.btn { font-size: 16px; line-height: 1.4; min-height: 48px; padding: 12px 17px; }
+.feature-title { font-size: 14px; letter-spacing: .08em; }
+.features, .features div { font-size: 15px; line-height: 1.55; gap: 9px; }
+.features b { font-size: 15px; line-height: 1.55; }
+.footer-stat strong { font-size: 20px; line-height: 1.3; }
+.footer-stat span { font-size: 14px; line-height: 1.45; }
+.side-label { font-size: 12px; }
+.nav button { font-size: 15px; line-height: 1.45; padding: 13px; }
+.nav button .nav-ico { font-size: 20px; }
+.side-user strong { font-size: 14px; }
+.top-title { font-size: 20px; line-height: 1.35; }
+.topbar .muted.small { font-size: 13px; }
+.pill { font-size: 13px; line-height: 1.45; }
+.content { line-height: 1.55; }
+.page-head h1 { font-size: clamp(27px, 2.5vw, 36px); line-height: 1.2; }
+.page-head p { font-size: 15px; line-height: 1.55; }
+.metric-top { font-size: 14px; line-height: 1.5; }
+.metric-value { font-size: clamp(23px, 2.3vw, 31px); line-height: 1.25; }
+.trend, .metric-note { font-size: 13px; line-height: 1.5; }
+.panel-head { padding: 17px 19px; }
+.panel-head h3 { font-size: 16px; line-height: 1.4; }
+.panel-body, .panel-body p { font-size: 15px; line-height: 1.65; }
+th { font-size: 13px; line-height: 1.45; }
+td { font-size: 14px; line-height: 1.5; }
+.badge { font-size: 12px; line-height: 1.4; padding: 6px 9px; }
+.toolbar { gap: 11px; }
+.branch-row { font-size: 13px; line-height: 1.5; }
+.branch-val { font-size: 13px; }
+.summary-line, .summary-line strong { font-size: 14px; line-height: 1.55; }
+.notice { font-size: 14px; line-height: 1.65; }
+.empty-state { font-size: 15px; line-height: 1.65; }
+.cart-total { font-size: 23px; }
+.toast { font-size: 15px; line-height: 1.5; }
 
-/* Main app / navigation */
-.side-label { font-size: 11px; }
-.nav button { font-size: 14px; line-height: 1.4; padding: 12px; }
-.nav button .nav-ico { font-size: 19px; }
-.side-user strong { font-size: 13px; }
-.top-title { font-size: 19px; line-height: 1.3; }
-.topbar .muted.small { font-size: 12px; }
-.pill { font-size: 12px; line-height: 1.4; }
-.content { line-height: 1.5; }
-.page-head h1 { font-size: clamp(25px, 2.3vw, 35px); line-height: 1.2; }
-.page-head p { font-size: 14px; line-height: 1.5; }
-.metric-top { font-size: 13px; line-height: 1.45; }
-.metric-value { font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; }
-.trend, .metric-note { font-size: 12px; line-height: 1.45; }
-.panel-head { padding: 16px 18px; }
-.panel-head h3 { font-size: 15px; line-height: 1.35; }
-.panel-body { font-size: 14px; line-height: 1.6; }
-.panel-body p { font-size: 14px; line-height: 1.6; }
-th { font-size: 11px; line-height: 1.4; }
-td { font-size: 13px; line-height: 1.45; }
-.badge { font-size: 11px; line-height: 1.35; padding: 5px 8px; }
-.toolbar { gap: 10px; }
-.branch-row { font-size: 12px; line-height: 1.4; }
-.branch-val { font-size: 12px; }
-.summary-line { font-size: 13px; line-height: 1.5; }
-.summary-line strong { font-size: 13px; line-height: 1.45; }
-.notice { font-size: 13px; line-height: 1.6; }
-.empty-state { font-size: 14px; line-height: 1.6; }
-.cart-total { font-size: 21px; }
-.toast { font-size: 14px; line-height: 1.5; }
-
-/* Tablet and mobile: larger input text prevents tiny form controls on phones. */
 @media (max-width: 1000px) {
-  .nav button { font-size: 14px; }
-  .page-head p { font-size: 14px; }
-  .metric-top { font-size: 12px; }
-  .metric-note { font-size: 11.5px; }
+  .nav button { font-size: 15px; }
+  .page-head p { font-size: 15px; }
+  .metric-top { font-size: 13px; }
+  .metric-note { font-size: 12px; }
 }
-
 @media (max-width: 620px) {
-  :root { --readable-text: 14px; }
-  .branch-glance strong { font-size: 15px; }
-  .branch-list { font-size: 12.5px; line-height: 1.5; }
-  .welcome h1 { font-size: 27px; }
-  .welcome > .muted { font-size: 14px; }
-
-  .role-card { grid-template-columns: 100px minmax(0, 1fr); }
-  .role-art { padding: 12px 6px; }
-  .role-icon { font-size: 32px; }
-  .role-name { font-size: 12px; line-height: 1.3; overflow-wrap: normal; }
-  .role-desc { font-size: 11.5px; line-height: 1.45; }
-  .role-body { gap: 10px; padding: 13px; }
-  .field, .branch-select, .select, .search,
-  .form-row input, .form-row select, .lang-select {
-    font-size: 16px !important;
-    min-height: 48px;
-    padding: 12px 13px;
+  :root { --readable-text: 16px; }
+  body { font-size: 16px; }
+  .branch-glance strong { font-size: 16px; }
+  .branch-list { font-size: 14px; line-height: 1.55; }
+  .welcome h1 { font-size: 28px; }
+  .welcome > .muted { font-size: 15px; }
+  .role-card { grid-template-columns: 104px minmax(0, 1fr); }
+  .role-art { padding: 13px 7px; }
+  .role-icon { font-size: 36px; }
+  .role-name { font-size: 14px; line-height: 1.35; overflow-wrap: anywhere; }
+  .role-desc { font-size: 13px; line-height: 1.5; }
+  .role-body { gap: 12px; padding: 14px; }
+  .field, .branch-select, .select, .search, .form-row input, .form-row select, .lang-select {
+    font-size: 16px !important; min-height: 49px; padding: 12px 14px;
   }
-  .remember { font-size: 13px; gap: 9px; }
-  .remember input { width: 18px; height: 18px; }
-  .btn { font-size: 14px !important; min-height: 46px; padding: 12px 14px; }
-  .feature-title { font-size: 13px; margin-top: 4px; }
-  .features { gap: 7px; font-size: 13px; }
-  .features div { gap: 8px; font-size: 13px; line-height: 1.5; }
-  .features b { font-size: 13px; }
-
-  .footer-stat strong { font-size: 15px; }
-  .footer-stat span { font-size: 12px; }
-  .lang-select { font-size: 15px !important; }
-
-  .top-title { font-size: 15px; }
-  .topbar .muted.small { font-size: 11.5px; }
-  .top-actions .pill { font-size: 11px; }
-  .page-head h1 { font-size: 26px; }
-  .page-head p { font-size: 13px; }
-  .actions .btn, .actions .select { font-size: 13px !important; }
-  .metric { padding: 13px; }
-  .metric-top { font-size: 12px; }
-  .metric-value { font-size: 22px; }
-  .metric-note, .trend { font-size: 11.5px; }
-  .panel-head { padding: 13px; }
-  .panel-head h3 { font-size: 14px; }
-  .panel-body, .panel-body p { font-size: 13.5px; }
-  .toolbar .search, .toolbar .select, .search, .select { font-size: 14px !important; }
-  .branch-row { grid-template-columns: 76px minmax(0, 1fr) 68px; gap: 7px; font-size: 11px; }
-  .branch-val { font-size: 11px; }
-  .bar-label { font-size: 10px; }
-  .summary-line { font-size: 12.5px; }
-  .summary-line strong { font-size: 12.5px; }
-  .notice { font-size: 12.5px; }
-  td { font-size: 12.5px; }
-  th { font-size: 10.5px; }
-  .badge { font-size: 10.5px; }
+  .remember { font-size: 14px; gap: 10px; }
+  .remember input { width: 19px; height: 19px; }
+  .btn { font-size: 15px !important; min-height: 48px; padding: 12px 15px; }
+  .feature-title { font-size: 14px; margin-top: 4px; }
+  .features, .features div { gap: 8px; font-size: 14px; line-height: 1.55; }
+  .features b { font-size: 14px; }
+  .footer-stat strong { font-size: 17px; }
+  .footer-stat span { font-size: 13px; }
+  .lang-select { font-size: 16px !important; }
+  .top-title { font-size: 16px; }
+  .topbar .muted.small { font-size: 12px; }
+  .top-actions .pill { font-size: 12px; }
+  .page-head h1 { font-size: 27px; }
+  .page-head p { font-size: 14px; }
+  .actions .btn, .actions .select { font-size: 14px !important; }
+  .metric { padding: 14px; }
+  .metric-top { font-size: 13px; }
+  .metric-value { font-size: 23px; }
+  .metric-note, .trend { font-size: 12px; }
+  .panel-head { padding: 14px; }
+  .panel-head h3 { font-size: 15px; }
+  .panel-body, .panel-body p { font-size: 14px; }
+  .toolbar .search, .toolbar .select, .search, .select { font-size: 15px !important; }
+  .branch-row { grid-template-columns: 76px minmax(0, 1fr) 68px; gap: 7px; font-size: 12px; }
+  .branch-val { font-size: 12px; }
+  .bar-label { font-size: 12px; }
+  .summary-line, .summary-line strong { font-size: 13px; }
+  .notice { font-size: 13px; }
+  td { font-size: 13px; }
+  th { font-size: 12px; }
+  .badge { font-size: 11px; }
 }
-
 @media (max-width: 380px) {
   .role-card { grid-template-columns: 88px minmax(0, 1fr); }
-  .role-name { font-size: 11.5px; }
-  .role-desc { font-size: 11px; }
-  .role-body { padding: 10px; }
-  .features div { font-size: 12.5px; }
-  .metric-grid { gap: 7px; }
-  .metric { padding: 10px; }
-  .metric-value { font-size: 20px; }
+  .role-name { font-size: 13px; }
+  .role-desc { font-size: 12px; }
+  .role-body { padding: 11px; }
+  .features div { font-size: 13px; }
+  .metric-grid { gap: 8px; }
+  .metric { padding: 11px; }
+  .metric-value { font-size: 21px; }
 }
